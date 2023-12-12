@@ -1,0 +1,155 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.view-section-up{
+    border-radius: 0 0 150px 150px;
+    header{
+        ul{
+            li{
+                a{
+                    &::after{
+                        content: "";
+                        @include positionItem(absolute, initial, -5px, 0, 0, initial);
+                        background-color: $whiteColor;
+                        height: 2px;
+                        width: 0;
+                        @include transition(0.2s);
+                        border-radius: 20px;
+                    }
+                    &:hover{
+                        &::after{
+                            width: 10px;
+                        }
+                    }
+                }
+                &.active{
+                    a{
+                        &::after{
+                            width: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-view{
+        height: 600px;
+        .text-info-view{
+            max-width: 460px;
+            h1{
+                font-size: 50px
+            }
+        }
+        .man{
+            @include positionItem(absolute, initial, -25px, initial, initial, initial);
+            max-width: 330px
+        }
+        .vic-2{
+            @include positionItem(absolute, initial, -110px, initial, initial, initial);
+            max-width: 180px
+        }
+    }
+}
+
+// Section Car Wishha
+.car-wishha{
+    .slider{
+        &::after{
+            content: "";
+            @include positionItem(absolute, initial, -80px, initial, initial, initial);
+            background-color: $mainColor;
+            width: 102%;
+            height: 300px;
+            border-radius: 70px;
+        }
+    }
+    // Owl Nav
+    .owl-nav.disabled, .owl-nav{
+        @include positionItem(absolute, initial, 0, initial, initial, initial);
+    }
+}
+
+// Section Why Choose
+.why-choose{
+    .info-why{
+        h1{
+            &::after{
+                content: "";
+                @include positionItem(absolute, 50%, initial, initial, initial, translateY(-50%));
+                background-image: url('../../images/vic-1.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 46px;
+                height: 46px;
+            }
+        }
+    }
+    .up-section-blocks{
+        .block-item{
+            span{
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+                img{
+                    width: 45px;
+                    height: 45px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
+// Section Revive Shine
+.box-revive-shine{
+    width: 90%;
+    margin: auto;
+    min-height: 350px;
+    border-radius: 100px;
+    padding: 120px;
+    img{
+        @include positionItem(absolute, -60px, initial, initial, initial, initial);
+        max-width: 120px
+    }
+    a{
+        width: 200px;
+    }
+}
+
+// Section Customer
+.section-customer{
+    .block-customer{
+        border-radius: 25px;
+        img{
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+    }
+}
+
+// Owl Nav
+.owl-nav.disabled, .owl-nav{
+    @include flexItem(flex, center, center, row, initial);
+    display: flex !important;
+    margin-top: 30px;
+    button{
+        @include flexItem(flex, center, center, row, initial);
+        border: 1px solid $mainColor !important;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 15px;
+        i{
+            color: $mainColor;
+            font-size: 13px;
+        }
+    }
+}
+
+// Footer
+footer{
+    img{
+        max-width: 100px;
+    }
+}

@@ -1,0 +1,143 @@
+@use '../abstracts/mixins' as *;
+
+// Dir LTR
+
+html[dir=ltr] {
+
+    // Body App
+    body{
+        direction: ltr;
+    }
+
+    .view-section-up{
+        .section-view{
+            .man{
+                right: 0;
+            }
+            .vic-2{
+                left: -75px;
+            }
+        }
+    }
+
+    // Section Car Wishha
+    .car-wishha{
+        .container{
+            padding-left: 110px !important;
+        }
+        .slider{
+            &::after{
+                left: -10px;
+            }
+        }
+        // Owl Nav
+        .owl-nav.disabled, .owl-nav{
+            left: -340px;
+        }
+    }
+
+    // Section Why Choose
+    .why-choose{
+        .info-why{
+            h1{
+                &::after{
+                    right: 100px;
+                }
+            }
+        }
+    }
+
+    // Icon Select
+    .selector .icon-down{
+        right: 5px;
+    }
+
+    // Section Revive Shine
+    .box-revive-shine{
+        img{
+            right: 20px;
+        }
+    }
+
+
+    // Media
+    @media (max-width: 1200px) {
+        // Nav
+        .nav-header{
+            transform: translateX(-100%);  
+            left: 0;
+        }
+    }
+
+}
+
+// Dir RTL
+
+html[dir=rtl] {
+
+    // Body App
+    body{
+        direction: rtl;
+    }
+
+    .view-section-up{
+        .section-view{
+            .man{
+                left: 0;
+            }
+            .vic-2{
+                right: 0;
+            }
+        }
+    }
+
+    // Section Car Wishha
+    .car-wishha{
+        .container{
+            padding-right: 110px !important;
+        }
+        .slider{
+            &::after{
+                right: -10px;
+            }
+        }
+        // Owl Nav
+        .owl-nav.disabled, .owl-nav{
+            right: -340px;
+        }
+    }
+
+    // Icon Select
+    .selector .icon-down{
+        left: 5px;
+    }
+
+    // Section Why Choose
+    .why-choose{
+        .info-why{
+            h1{
+                &::after{
+                    left: 100px;
+                }
+            }
+        }
+    }
+
+    // Section Revive Shine
+    .box-revive-shine{
+        img{
+            left: 20px;
+        }
+    }
+    
+
+    // Media
+    @media (max-width: 1200px) {
+        // Nav
+        .nav-header{
+            transform: translateX(100%);  
+            right: 0; 
+        }
+    }
+
+}

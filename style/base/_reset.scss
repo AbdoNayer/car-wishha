@@ -1,0 +1,302 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+
+
+// Mixin
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+// Local Style Page
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+}
+
+html[dir=ltr] {
+    // Body App
+    body{
+        font-family: 'IBM Plex Sans', sans-serif !important;
+        font-weight: 400;
+    }
+}
+
+html[dir=rtl] {
+    // Body App
+    body{
+        font-family: 'Tajawal', sans-serif !important;
+    }
+}
+
+a, button, input, textarea, i{
+    @include transition(0.5s);
+}
+
+img{
+    object-fit: cover;
+}
+
+a{
+    text-decoration: none !important;
+    display: inline-block;
+    cursor: pointer;
+}
+
+i{
+    vertical-align: middle;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 10px 0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+// Tools Form
+input{
+    border: 1px solid #afafaf;
+    color: #afafaf;
+    background-color:transparent;
+    padding: 0 10px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+/* Select */
+
+select{
+    color: #afafaf;
+    background-color:transparent;
+    font-size: 13px;
+    option{
+        padding: 10px;
+    }
+}
+
+.selector .icon-down{
+    @include positionItem(absolute, 10px, initial, initial, initial, initial);
+    font-size: 6px;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+::-webkit-input-placeholder {
+    color: #afafaf;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: #afafaf;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #afafaf;
+    opacity: 1;
+}
+
+:-moz-placeholder {
+    color: #afafaf;
+    opacity: 1;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    @include positionItem(absolute, 5px, initial, initial, -7px, initial);
+    color: $mainColor
+}
+
+::-webkit-calendar-picker-indicator {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%2360AC93" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+}
+
+.fix-icon-Input{
+    @include positionItem(absolute, 50%, initial, initial, initial, translateY(-50%));
+}
+
+.back{
+    transform: translate(0) !important;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+// Style Scroll Site
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+// Colors
+.colorMain{
+    color: $mainColor !important;
+}
+
+.secondColor{
+    color: $secondColor !important;
+}
+
+// Bg Colors
+.bgColorMain{
+    background-color: $mainColor !important;
+}
+
+.bgSecondColor{
+    background-color: $secondColor !important;
+}
+
+// Border Color
+.borderColorMain{
+    border: 1px solid $mainColor !important;
+}
+
+.borderSecondColor{
+    border: 1px solid $secondColor !important;
+}
+
+// Class Important
+
+button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+  
+.btn-button{
+    height: 50px;
+    width: 160px;
+    font-size: 14px;
+    border-radius: 15px;
+    &:disabled{
+        background-color: #BBB !important;
+        color: $blackColor !important;
+    }
+    &:hover{
+      transform: scale(0.9);
+      background-color: $mainColor !important;
+      color: $whiteColor !important;
+      border-color: $mainColor !important;
+    }
+}
+
+owl-carousel-o {
+    .owl-carousel {
+      direction: ltr;
+    }
+}
+
+.text-overflow{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 170px;
+    overflow: hidden;
+}
+
+.main-body{
+    min-height: 600px;
+}
+
+.min-main-body{
+    min-height: 400px;
+}
+
+.min-max-width{
+    max-width: 305px;
+}
+
+.old-shadow{
+    box-shadow: 0 3px 6px #00000029;
+}
+
+.over-x{
+    overflow-x: auto;
+}
+
+.height-view-scroll{
+    height: 500px;
+    overflow-y: auto;
+}
+
+.height-mini-scroll{
+    height: 250px;
+    overflow-y: auto;
+}
+
+.outline{
+    outline: none !important;
+    box-shadow: none !important
+}
+
+.rounded-4{
+    border-radius: 15px !important;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+// Fonts Sizs
+
+.small-font-10{
+    font-size: 10px;
+}
+
+.small-font-11{
+    font-size: 11px;
+}
+
+.small-font-12{
+    font-size: 12px;
+}
+
+.small-font-13{
+    font-size: 13px;
+}
+
+// Circle Icon BTN
+
+.btn-icon-35{
+    width: 35px;
+    height: 35px;
+}
+
+.btn-icon-45{
+    width: 45px;
+    height: 45px;
+}
+
+.btn-icon-65{
+    width: 65px;
+    height: 65px;
+}
