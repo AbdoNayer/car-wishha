@@ -3,17 +3,10 @@
 $(window).on('load', function () {
 
     // Loading Page
-    $(".spinner").delay(500).fadeOut(400, function() {
-        document.documentElement.style.setProperty('--backRightIn', 'translateX(100%)')
-        document.documentElement.style.setProperty('--backLefttIn', 'translateX(-100%)')
+    $(".loading").delay(500).fadeOut(400, function() {
         $(".loader").fadeOut(1500);
     });
     $("body").css("overflow-y", "auto");
-
-    if ($(window).width() < 767) {
-        $("aside").addClass("in-aside");
-        document.documentElement.style.setProperty('--aside-nav-width', '100px')
-    }
 
 });
 
@@ -30,9 +23,8 @@ $(document).ready(function () {
     // Click Open Nav In Mobile
     $(document).on("click", ".click-nav, .overlay",function() {
         $(".handle").toggleClass("closed");
-        $(".nav-header").toggleClass("back");
+        $(".links-header").toggleClass("back");
         $(".overlay-fixed").toggleClass("back");
-        $("nav li").toggleClass("animSlideIn");
         $("body").toggleClass("overflow-hidden");
     });
 
@@ -65,10 +57,10 @@ $(document).ready(function () {
         ],
         responsive:{
             0:{
-                items:1
+                items:1.2
             },
             900:{
-                items:2
+                items:2.2
             },
             1000:{
                 items:3.2
@@ -94,10 +86,10 @@ $(document).ready(function () {
         ],
         responsive:{
             0:{
-                items:1
+                items:1.2
             },
             900:{
-                items:1
+                items:1.2
             },
             1000:{
                 items:3.2

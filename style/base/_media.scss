@@ -1,18 +1,90 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
 
-
 @media (max-width: 1000px) {
-    
-}
-
-@media (max-width: 990px) {
-
+    .col-xs-12{
+        width: 100% !important;
+        flex-basis: 100%;
+    }
 }
 
 @media (max-width: 767px) {
-    
+    .none-mobile{
+        display: none;
+    }
+    .flex-col{
+        flex-direction: column !important;
+    }
+    .section-view {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .box-revive-shine {
+        padding: 20px !important;
+        border-radius: 30px;
+        width: 100%;
+    }
+    footer{
+        text-align: center;
+        .d-flex{
+            justify-content: center;
+        }
+    }
 }
 
-
+@media (max-width: 530px) {
+    .click-nav{
+        display: inline-block
+    }
+    .info-lap{
+        width: 100%;
+    }
+    .flex-col-mini{
+        flex-direction: column !important;
+    }
+    .box-booking{
+        flex-direction: column;
+        .selector{
+            display: flex;
+        }
+        input{
+            border: 0 !important;
+        }
+        input, div{
+            width: 100%;
+            border: 0 !important;
+            margin: 5px 0 !important;
+        }
+        .btn-button{
+            margin: 10px 0 !important;
+            width: 70% !important;
+        }
+    }
+    .links-header {
+        @include positionItem(fixed, 0, initial, initial, initial, initial);
+        @include transition(0.5s);
+        background-color: $whiteColor;
+        box-shadow: 0 3px 6px #00000029;
+        width: 300px;
+        height: 100%;
+        z-index: 9999;
+        justify-content: initial !important;
+        padding-top: 30px;
+        li{
+            &.active{
+                a{
+                    &::after{
+                        bottom: 3px;
+                        background-color: $mainColor;
+                    }
+                }
+            }
+        }
+        a{
+            margin: 14px 0 !important;
+            color: $mainColor !important;
+        }
+    }
+}
 

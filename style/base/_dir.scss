@@ -8,6 +8,11 @@ html[dir=ltr] {
     body{
         direction: ltr;
     }
+    
+    input[type="date"]::-webkit-inner-spin-button,
+    input[type="date"]::-webkit-calendar-picker-indicator {
+       left: -7px;
+    }
 
     .view-section-up{
         .section-view{
@@ -41,15 +46,20 @@ html[dir=ltr] {
         .info-why{
             h1{
                 &::after{
-                    right: 100px;
+                    right: 10px;
                 }
             }
         }
     }
 
     // Icon Select
-    .selector .icon-down{
-        right: 5px;
+    .selector {
+        .icon-down{
+            right: 5px;
+        }
+        .fa-location-dot {
+            left: -3px;
+        }
     }
 
     // Section Revive Shine
@@ -61,9 +71,17 @@ html[dir=ltr] {
 
 
     // Media
-    @media (max-width: 1200px) {
+    @media (max-width: 1000px) {
+        // Section Car Wishha
+        .car-wishha{
+            .container{
+                padding-left: 40px !important;
+            }
+        }
+    }
+    @media (max-width: 530px) {
         // Nav
-        .nav-header{
+        .links-header{
             transform: translateX(-100%);  
             left: 0;
         }
@@ -78,6 +96,15 @@ html[dir=rtl] {
     // Body App
     body{
         direction: rtl;
+    }
+
+    input{
+        text-align: right;
+    }
+    
+    input[type="date"]::-webkit-inner-spin-button,
+    input[type="date"]::-webkit-calendar-picker-indicator {
+       right: -7px;
     }
 
     .view-section-up{
@@ -108,8 +135,13 @@ html[dir=rtl] {
     }
 
     // Icon Select
-    .selector .icon-down{
-        left: 5px;
+    .selector {
+        .icon-down{
+            left: 5px;
+        }
+        .fa-location-dot {
+            right: -3px;
+        }
     }
 
     // Section Why Choose
@@ -117,7 +149,7 @@ html[dir=rtl] {
         .info-why{
             h1{
                 &::after{
-                    left: 100px;
+                    left: 10px;
                 }
             }
         }
@@ -132,9 +164,17 @@ html[dir=rtl] {
     
 
     // Media
-    @media (max-width: 1200px) {
+    @media (max-width: 1000px) {
+        // Section Car Wishha
+        .car-wishha{
+            .container{
+                padding-right: 40px !important;
+            }
+        }
+    }
+    @media (max-width: 530px) {
         // Nav
-        .nav-header{
+        .links-header{
             transform: translateX(100%);  
             right: 0; 
         }

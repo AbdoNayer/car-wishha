@@ -70,7 +70,7 @@ input{
     border: 1px solid #afafaf;
     color: #afafaf;
     background-color:transparent;
-    padding: 0 10px;
+    padding: 0 15px;
     height: 50px;
     border-radius: 10px;
     font-size: 13px;
@@ -82,14 +82,20 @@ select{
     color: #afafaf;
     background-color:transparent;
     font-size: 13px;
+    padding: 0 15px;
     option{
         padding: 10px;
     }
 }
 
-.selector .icon-down{
-    @include positionItem(absolute, 10px, initial, initial, initial, initial);
-    font-size: 6px;
+.selector {
+    .icon-down{
+        @include positionItem(absolute, 10px, initial, initial, initial, initial);
+        font-size: 6px;
+    }
+    .fa-location-dot {
+        @include positionItem(absolute, 50%, initial, initial, initial, translateY(-50%));
+    }
 }
 
 select{
@@ -119,7 +125,7 @@ select{
 
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
-    @include positionItem(absolute, 5px, initial, initial, -7px, initial);
+    @include positionItem(absolute, 5px, initial, initial, initial, initial);
     color: $mainColor
 }
 
@@ -210,10 +216,8 @@ button{
     }
 }
 
-owl-carousel-o {
-    .owl-carousel {
-      direction: ltr;
-    }
+.owl-carousel {
+    direction: ltr;
 }
 
 .text-overflow{

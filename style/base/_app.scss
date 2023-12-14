@@ -1,6 +1,33 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
 
+// Click Nav
+.click-nav {
+    display: none;
+    z-index: 999;
+    .handle {
+      background: $whiteColor;
+      height: 4px;
+      width: 40px;
+      margin: 0.32em auto;
+      transition: all 350ms cubic-bezier(0.28, 0.55, 0.385, 1.65);
+      transition-timing-function: cubic-bezier(0.28, 0.55, 0.385, 1.65);
+    }
+    .closed {
+      transform: rotate(45deg);
+      width: 40px;
+      position: relative;
+      top: -5px;
+        &:nth-of-type(2) {
+            transform: rotate(-45deg);
+            top: -13px;
+        }
+        &:nth-of-type(3) {
+            display: none;
+        }
+    }
+}
+
 .view-section-up{
     border-radius: 0 0 150px 150px;
     header{
